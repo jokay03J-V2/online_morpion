@@ -1,6 +1,10 @@
+interface Member {
+    username: string
+}
+
 export interface State {
     party: {
-        members: string[],
+        members: Member[],
         tiles: null[][]
     },
 }
@@ -15,8 +19,13 @@ export const useMorpionStore = defineStore("morpion", {
     actions: {
         bindEvents() {
             socket.on('connect', () => {
+                socket.on('room:ready', (state: State) => {
 
+                });
             });
         },
+        joinRoom(gameId: string) {
+            socket.emit('room:join', gameId);
+        }
     }
 })

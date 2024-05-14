@@ -6,5 +6,6 @@ export const useUserStore = defineStore('user', {
         setUsername(username: string) {
             this.username = username;
         }
-    }
+    },
+    persist: true
 });

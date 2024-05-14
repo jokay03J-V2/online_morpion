@@ -25,7 +25,7 @@ const handleSubmit = (e: Event) => {
     </form>
     <ul>
       <li v-for="room in roomsStore.rooms">
-        {{ room.label }}
+        <NuxtLink :to="'game/' + room.id">{{ room.label }}</NuxtLink>
       </li>
     </ul>
   </section>
