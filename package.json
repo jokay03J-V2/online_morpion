@@ -1,0 +1,13 @@
+{
+  "name": "monorepos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:all": "pnpm -r run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
